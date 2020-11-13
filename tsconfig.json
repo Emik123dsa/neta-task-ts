@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "importHelpers": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "allowJs": false,
+    "target": "ES5",
+    "baseUrl": ".",
+    "strict": true,
+    "noEmit": true,
+    "types": ["@types/node"],
+    "typeRoots": ["types/**/*.d.ts", "node_modules/@types"],
+    "paths": {
+      "@neta/*": ["src/*"]
+    },
+    "lib": ["ESNext", "DOM", "ESNext.AsyncIterable"]
+  }
+}

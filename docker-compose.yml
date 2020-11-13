@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  redis:
+    container_name: redis
+    build:
+      context: .
+      dockerfile: Dockerfile.redis
+    restart: always
+    volumes:
+      - "./redis.conf:/usr/local/etc/redis/redis.conf"
+    environment:
+      REDIS_PASSWORD: B6pQxQd3rcKAvzGTOYQWahXYNpVmoXgCU/GqyWH/1y5shgdUoImEA6smOi+uUXoROw2M+NhcGEAxdcP8
+    ports:
+      - "6379:6379"
+    networks:
+      - redis-network
+
+networks:
+  redis-network:
+    driver: bridge
